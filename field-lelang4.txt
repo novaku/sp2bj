@@ -1,0 +1,297 @@
+<div class="control-group">
+<label class="control-label" for="inputPassword">id_lelang</label>
+<div class="controls">
+<input type="text" class="span8" name="id_lelang" id="focusedInput" placeholder="id_lelang" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Kegiatan</label>
+<div class="controls">
+<input type="text" class="span8" name="Kegiatan" id="focusedInput" placeholder="Kegiatan" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_undangan</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_undangan" id="focusedInput" placeholder="Tgl_undangan" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Hps</label>
+<div class="controls">
+<input type="text" class="span8" name="Hps" id="focusedInput" placeholder="Hps" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Terbilang_hps</label>
+<div class="controls">
+<input type="text" class="span8" name="Terbilang_hps" id="focusedInput" placeholder="Terbilang_hps" required> 
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Hari_bapp</label>
+<div class="controls">
+<input type="text" class="span8" name="Hari_bapp" id="focusedInput" placeholder="Hari_bapp" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_bapp</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_bapp" id="focusedInput" placeholder="Tgl_bapp" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Bln_bapp</label>
+<div class="controls"><input type="text" class="span8" name="Bln_bapp" id="focusedInput" placeholder="Bln_bapp" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_angka_bapp</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_angka_bapp" id="focusedInput" placeholder="Tgl_angka_bapp" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Nilai_penawaran</label>
+<div class="controls">
+<input type="text" class="span8" name="Nilai_penawaran" id="focusedInput" placeholder="Nilai_penawaran" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Terbilang</label>
+<div class="controls">
+<input type="text" class="span8" name="Terbilang" id="focusedInput" placeholder="Terbilang" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Hari_bahep</label>
+<div class="controls">
+<input type="text" class="span8" name="Hari_bahep id="focusedInput" placeholder="Hari_bahep" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_nahep</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_nahep" id="focusedInput" placeholder="Tgl_nahep" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Bln_bahep</label>
+<div class="controls">
+<input type="text" class="span8" name="Bln_bahep" id="focusedInput" placeholder="Bln_bahep" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_angka_bahep</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_angka_bahep" id="focusedInput" placeholder="Tgl_angka_bahep" required> 	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_und_kla_nego</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_und_kla_nego" id="focusedInput" placeholder="Tgl_und_kla_nego" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Hari_kla_nego</label>
+<div class="controls">
+<input type="text" class="span8" name="Hari_kla_nego" id="focusedInput" placeholder="Hari_kla_nego" required> 
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_kla_nego</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_kla_nego" id="focusedInput" placeholder="Tgl_kla_nego" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Hari_bakn</label>
+<div class="controls">
+<input type="text" class="span8" name="Hari_bakn" id="focusedInput" placeholder="Hari_bakn" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_bakn</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_bakn" id="focusedInput" placeholder="Tgl_bakn" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Bln_bakn</label>
+<div class="controls">
+<input type="text" class="span8" name="Bln_bakn" id="focusedInput" placeholder="Bln_bakn" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_angka_bakn</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_angka_bakn" id="focusedInput" placeholder="Tgl_angka_bakn" required> 	
+		                                </div>
+	                                    </div> 
+<div class="control-group"><label class="control-label" for="inputPassword">Harga_nego</label>
+<div class="controls">
+<input type="text" class="span8" name="Harga_nego" id="focusedInput" placeholder="Harga_nego" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Terbilang_nego</label>
+<div class="controls">
+<input type="text" class="span8" name="Terbilang_nego" id="focusedInput" placeholder="Terbilang_nego" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Hari_bahpl</label>
+<div class="controls">
+<input type="text" class="span8" name="Hari_bahpl" id="focusedInput" placeholder="Hari_bahpl" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_bahpl</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_bahpl" id="focusedInput" placeholder="Tgl_bahpl" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Bln_bahpl</label>
+<div class="controls">
+<input type="text" class="span8" name="Bln_bahpl" id="focusedInput" placeholder="Bln_bahpl" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_angka_bahpl</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_angka_bahpl" id="focusedInput" placeholder="Tgl_angka_bahpl" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Hari_bap_pemenang</label>
+<div class="controls">
+<input type="text" class="span8" name="Hari_bap_pemenang" id="focusedInput" placeholder="Hari_bap_pemenang" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_bap_pemenang</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_bap_pemenang" id="focusedInput" placeholder="Tgl_bap_pemenang" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Bln_bap_pemenang</label>
+<div class="controls">
+<input type="text" class="span8" name="Bln_bap_pemenang" id="focusedInput" placeholder="Bln_bap_pemenang" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_angka_bap_pemenang</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_angka_bap_pemenang" id="focusedInput" placeholder="Tgl_angka_bap_pemenang" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Masa_pemel</label>
+<div class="controls">
+<input type="text" class="span8" name="Masa_pemel" id="focusedInput" placeholder="Masa_pemel" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Terbilang_pemel</label>
+<div class="controls">
+<input type="text" class="span8" name="Terbilang_pemel" id="focusedInput" placeholder="Terbilang_pemel" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Pj</label>
+<div class="controls">
+<input type="text" class="span8" name="Pj" id="focusedInput" placeholder="Pj" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Lb</label>
+<div class="controls">
+<input type="text" class="span8" name="Lb" id="focusedInput" placeholder="Lb" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Hari_kontrak</label>
+<div class="controls">
+<input type="text" class="span8" name="Hari_kontrak" id="focusedInput" placeholder="Hari_kontrak" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_kontrak</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_kontrak" id="focusedInput" placeholder="Tgl_kontrak" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Bln_kontrak</label>
+<div class="controls">
+<input type="text" class="span8" name="Bln_kontrak" id="focusedInput" placeholder="Bln_kontrak" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_angka_kontrak</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_angka_kontrak" id="focusedInput" placeholder="Tgl_angka_kontrak" required>	 
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Masa_pelaksanaan</label>
+<div class="controls">
+<input type="text" class="span8" name="Masa_pelaksanaan" id="focusedInput" placeholder="Masa_pelaksanaan" required> 	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Terbilang_masa_pelaks</label>
+<div class="controls">
+<input type="text" class="span8" name="Terbilang_masa_pelaks" id="focusedInput" placeholder="Terbilang_masa_pelaks" required>	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Waktu_pelaksanaan</label>
+<div class="controls">
+<input type="text" class="span8" name="Waktu_pelaksanaan" id="focusedInput" placeholder="Waktu_pelaksanaan" required> 	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_baph</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_baph" id="focusedInput" placeholder="Tgl_baph" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Hari_splspmk</label>
+<div class="controls">
+<input type="text" class="span8" name="Hari_splspmk" id="focusedInput" placeholder="Hari_splspmk" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_splspmk</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_splspmk" id="focusedInput" placeholder="Tgl_splspmk" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Bln_splspmk</label>
+<div class="controls">
+<input type="text" class="span8" name="Bln_splspmk" id="focusedInput" placeholder="Bln_splspmk" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Tgl_angka_splspmk</label>
+<div class="controls">
+<input type="text" class="span8" name="Tgl_angka_splspmk" id="focusedInput" placeholder="Tgl_angka_splspmk" required> 	
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Kpa_ppk</label>
+<div class="controls">
+<input type="text" class="span8" name="Kpa_ppk" id="focusedInput" placeholder="Kpa_ppk" required>
+		                                </div>
+	                                    </div> 
+<div class="control-group">
+<label class="control-label" for="inputPassword">Nip_kpa_ppk</label>
+<div class="controls">
+<input type="text" class="span8" name="Nip_kpa_ppk" id="focusedInput" placeholder="Nip_kpa_ppk" required>		                                		</div>
+	                                    </div>

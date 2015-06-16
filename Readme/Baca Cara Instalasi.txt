@@ -1,0 +1,15 @@
+      
+**/
+
+Cara Instalasi
+
+1. install xampp
+2. copy dan buat direktori masukkan ke direktori htdocs dengan nama 'sp2bj'
+3. Buat Database SQL namanya 'thesis'
+4. importkan databasenya
+5. jalankan di localhost dengan link sbb http://localhost/
+6. administrator:
+   Username:admin 
+   password:admin
+   
+Ok Selamat memakai aplikasi ini!

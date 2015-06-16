@@ -1,0 +1,122 @@
+									  <?php
+if (isset($_POST['update'])){
+$id_lelang = $_POST['id_lelang'];
+$Kegiatan = $_POST['Kegiatan'];
+$Tgl_undangan = $_POST['Tgl_undangan'];
+$Hps = $_POST['Hps'];
+$Terbilang_hps = $_POST['Terbilang_hps'];
+$Hari_bapp = $_POST['Hari_bapp'];
+$Tgl_bapp = $_POST['Tgl_bapp'];
+$Bln_bapp = $_POST['Bln_bapp'];
+$Tgl_angka_bapp = $_POST['Tgl_angka_bapp'];
+$Nilai_penawaran = $_POST['Nilai_penawaran'];
+$Terbilang = $_POST['Terbilang'];
+$Hari_bahep = $_POST['Hari_bahep'];
+$Tgl_nahep = $_POST['Tgl_nahep'];
+$Bln_bahep = $_POST['Bln_bahep'];
+$Tgl_angka_bahep = $_POST['Tgl_angka_bahep'];
+$Tgl_und_kla_nego = $_POST['Tgl_und_kla_nego'];
+$Hari_kla_nego = $_POST['Hari_kla_nego'];
+$Tgl_kla_nego = $_POST['Tgl_kla_nego'];
+$Hari_bakn = $_POST['Hari_bakn'];
+$Tgl_bakn = $_POST['Tgl_bakn'];
+$Bln_bakn = $_POST['Bln_bakn'];
+$Tgl_angka_bakn = $_POST['Tgl_angka_bakn'];
+$Harga_nego = $_POST['Harga_nego'];
+$Terbilang_nego = $_POST['Terbilang_nego'];
+$Hari_bahpl = $_POST['Hari_bahpl'];
+$Tgl_bahpl = $_POST['Tgl_bahpl'];
+$Bln_bahpl = $_POST['Bln_bahpl'];
+$Tgl_angka_bahpl = $_POST['Tgl_angka_bahpl'];
+$Hari_bap_pemenang = $_POST['Hari_bap_pemenang'];
+$Tgl_bap_pemenang = $_POST['Tgl_bap_pemenang'];
+$Bln_bap_pemenang = $_POST['Bln_bap_pemenang'];
+$Tgl_angka_bap_pemenang = $_POST['Tgl_angka_bap_pemenang'];
+$Masa_pemel = $_POST['Masa_pemel'];
+$Terbilang_pemel = $_POST['Terbilang_pemel'];
+$Pj = $_POST['Pj'];
+$Lb = $_POST['Lb'];
+$Hari_kontrak = $_POST['Hari_kontrak'];
+$Tgl_kontrak = $_POST['Tgl_kontrak'];
+$Bln_kontrak = $_POST['Bln_kontrak'];
+$Tgl_angka_kontrak = $_POST['Tgl_angka_kontrak'];
+$Masa_pelaksanaan = $_POST['Masa_pelaksanaan'];
+$Terbilang_masa_pelaks = $_POST['Terbilang_masa_pelaks'];
+$Waktu_pelaksanaan = $_POST['Waktu_pelaksanaan'];
+$Tgl_baph = $_POST['Tgl_baph'];
+$Hari_splspmk = $_POST['Hari_splspmk'];
+$Tgl_splspmk = $_POST['Tgl_splspmk'];
+$Bln_splspmk = $_POST['Bln_splspmk'];
+$Tgl_angka_splspmk = $_POST['Tgl_angka_splspmk'];
+$Kpa_ppk= $_POST['Kpa_ppk'];
+$Nip_kpa_ppk = $_POST['Nip_kpa_ppk'];
+										
+$query = mysql_query("select * from data_lelang where id_lelang = '$id_lelang' ")or die(mysql_error());
+$count = mysql_num_rows($query);
+
+		                      <script>
+alert('Data lelang Siap di UPDATE, Segera!');
+                                      </script>
+		                              <?php
+
+mysql_query("update data_lelang set 
+id_lelang='$id_lelang',
+Kegiatan='$Kegiatan',
+Tgl_undangan='$Tgl_undangan',
+Hps='$Hps',
+Terbilang_hps='$Terbilang_hps',
+Hari_bapp='$Hari_bapp',
+Tgl_bapp='$Tgl_bapp',
+Bln_bapp='$Bln_bapp',
+Tgl_angka_bapp='$Tgl_angka_bapp',
+Nilai_penawaran='$Nilai_penawaran',
+Terbilang='$Terbilang',
+Hari_bahep='$Hari_bahep',
+Tgl_nahep='$Tgl_nahep',
+Bln_bahep='$Bln_bahep',
+Tgl_angka_bahep='$Tgl_angka_bahep',
+Tgl_und_kla_nego='$Tgl_und_kla_nego',
+Hari_kla_nego='$Hari_kla_nego',
+Tgl_kla_nego='$Tgl_kla_nego',
+Hari_bakn='$Hari_bakn',
+Tgl_bakn='$Tgl_bakn',
+Bln_bakn='$Bln_bakn',
+Tgl_angka_bakn='$Tgl_angka_bakn',
+Harga_nego='$Harga_nego',
+Terbilang_nego='$Terbilang_nego',
+Hari_bahpl='$Hari_bahpl',
+Tgl_bahpl='$Tgl_bahpl',
+Bln_bahpl='$Bln_bahpl',
+Tgl_angka_bahpl='$Tgl_angka_bahpl',
+Hari_bap_pemenang='$Hari_bap_pemenang',
+Tgl_bap_pemenang='$Tgl_bap_pemenang',
+Bln_bap_pemenang='$Bln_bap_pemenang',
+Tgl_angka_bap_pemenang='$Tgl_angka_bap_pemenang',
+Masa_pemel='$Masa_pemel',
+Terbilang_pemel='$Terbilang_pemel',
+Pj='$Pj',
+Lb='$Lb',
+Hari_kontrak='$Hari_kontrak',
+Tgl_kontrak='$Tgl_kontrak',
+Bln_kontrak='$Bln_kontrak',
+Tgl_angka_kontrak='$Tgl_angka_kontrak',
+Masa_pelaksanaan='$Masa_pelaksanaan',
+Terbilang_masa_pelaks='$Terbilang_masa_pelaks',
+Waktu_pelaksanaan='$Waktu_pelaksanaan',
+Tgl_baph='$Tgl_baph',
+Hari_splspmk='$Hari_splspmk',
+Tgl_splspmk='$Tgl_splspmk',
+Bln_splspmk='$Bln_splspmk',
+Tgl_angka_splspmk='$Tgl_angka_splspmk',
+Kpa_ppk='$Kpa_ppk',
+Nip_kpa_ppk='$Nip_kpa_ppk'																		
+where id_lelang = '$get_id' ")or die(mysql_error());	
+mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Pengupdate-an Data Penyedia dgn id $id_penyedia')")or die(mysql_error());									
+?>	
+
+		                              <script>
+alert('Data Lelang yakin mau di UPDATE!');
+window.location = "data_lelang.php";
+$.jGrowl("Data lelang Sukses diUPDATE", { header: 'Data diUPDATE' });
+                                      </script>
+		                              <?php

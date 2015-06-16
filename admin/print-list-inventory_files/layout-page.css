@@ -1,0 +1,40 @@
+    /* SCREEN STYLES */
+    body {
+    ...
+    }
+
+    .noprint {display:none;}
+
+    /* PRINT_STYLE*/
+
+    @media print{
+     .noprint {display:block;}
+    #leftBlock,#headerColumneLeft,#headerColumneMiddle,#headerColumneRight,#hcss_menu ul, #hcss_menu ul li a, #footermisc,
+      #breadcrumb
+      {display:none;
+       background:transparent none;}
+     
+      body,#wrapper,#container,#footer{
+      position: relative;
+      width:auto;
+         overflow:visible !important;
+        color:#000000;
+         margin:0;padding:0;
+        }
+      #rightBlock{
+      width:auto;
+      margin: 10px auto 2em auto;
+      line-height:150%;
+      }
+     
+      #header {
+      height:auto;
+      width:auto;
+      }
+     
+      #headerLogoLink {
+      margin:0 0 0 -5px;
+      padding:0;
+      }
+
+    }
