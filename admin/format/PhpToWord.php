@@ -70,7 +70,7 @@ class PhpToWord
 
     public static function dateFormatIndo($date)
     {
-        if($date == '0000-00-00') {
+        if ($date == '0000-00-00') {
             return '';
         } else {
             $BulanIndo = array(
@@ -92,7 +92,8 @@ class PhpToWord
             $bulan = substr($date, 5, 2);
             $tgl   = substr($date, 8, 2);
 
-            $result = $tgl . " " . $BulanIndo[(int) $bulan - 1] . " " . $tahun;
+            $idx    = (intval($bulan) - 1) < 0 ? 0 : intval($bulan) - 1;
+            $result = $tgl . " " . $BulanIndo[$idx] . " " . $tahun;
             return ($result);
         }
     }
