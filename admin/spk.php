@@ -18,7 +18,7 @@ if(isset($kode_kegiatan) || !empty($kode_kegiatan)) {
     $templateProcessor->setValue('nama_kegiatan', htmlspecialchars($data['data_lelang']['nama_kegiatan']));
     $templateProcessor->setValue('panjang', htmlspecialchars($data['rka_skpd']['panjang']));
     $templateProcessor->setValue('lebar', htmlspecialchars($data['rka_skpd']['lebar']));
-    $templateProcessor->setValue('lok_kegiatan', htmlspecialchars($data['rka_skpd']['lok_kegiatan']));
+    $templateProcessor->setValue('lok_kegiatan', htmlspecialchars(strtoupper($data['rka_skpd']['lok_kegiatan'])));
     $templateProcessor->setValue('masa_pemel', htmlspecialchars($data['data_lelang']['masa_pemel']));
     $templateProcessor->setValue('terbilang_pemel', htmlspecialchars($data['data_lelang']['terbilang_pemel']));
     $templateProcessor->setValue('harga_nego', htmlspecialchars(PhpToWord::numberFormatIndo($data['data_lelang']['harga_nego'])));
@@ -28,9 +28,9 @@ if(isset($kode_kegiatan) || !empty($kode_kegiatan)) {
     $templateProcessor->setValue('masa_pelaksanaan', htmlspecialchars($data['data_lelang']['masa_pelaksanaan']));
     $templateProcessor->setValue('terbilang_masa_pelaks', htmlspecialchars($data['data_lelang']['terbilang_masa_pelaks']));
     $templateProcessor->setValue('waktu_pelaksanaan', htmlspecialchars($data['data_lelang']['waktu_pelaksanaan']));
-    $templateProcessor->setValue('nama_prsh', htmlspecialchars($data['penyedia']['nama_prsh']));
+    $templateProcessor->setValue('nama_prsh', htmlspecialchars(strtoupper($data['penyedia']['nama_prsh'])));
     $templateProcessor->setValue('alamat_prsh', htmlspecialchars($data['penyedia']['alamat']));
-    $templateProcessor->setValue('nama_direktur', htmlspecialchars($data['penyedia']['nama_direktur']));
+    $templateProcessor->setValue('nama_direktur', htmlspecialchars(strtoupper($data['penyedia']['nama_direktur'])));
     $templateProcessor->setValue('tgl_akte', htmlspecialchars(PhpToWord::dateFormatIndo($data['penyedia']['tgl_akte'])));
     $templateProcessor->setValue('no_akte', htmlspecialchars($data['penyedia']['no_akte']));
     $templateProcessor->setValue('notaris', htmlspecialchars($data['penyedia']['notaris']));
