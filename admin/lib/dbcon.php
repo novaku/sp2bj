@@ -2,7 +2,7 @@
 //core
 function dbcon(){
 	$user = "root";
-	$pass = "admin123";
+	$pass = "";
 	$host = "localhost";
 	$db = "thesis";
 	@mysql_connect($host,$user,$pass);
