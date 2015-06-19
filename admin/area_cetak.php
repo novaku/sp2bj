@@ -13,6 +13,16 @@
 		              $('#add').tooltip('show');
 		              $('#add').tooltip('hide');
 		              });
+                      function area_cetak(link) {
+                          var r = confirm("Klik OK untuk format dengan Uang Muka, klik CANCEL untuk format tanpa Uang Muka");
+                          if (r == true) {
+                              var win = window.open('spk.php?dp=true&kode_kegiatan='+link, '_blank');
+                              win.focus();
+                          } else {
+                              var win = window.open('spk.php?dp=false&kode_kegiatan='+link, '_blank');
+                              win.focus();
+                          }
+                      }
 		             </script> 
 					 <div id="sc" align="center"><image src="images/sclogo.png" width="45%" height="45%"/></div>
 				<?php	
@@ -92,13 +102,13 @@
             <td><?php echo $row[8]; ?></td>
         </td>
 			<?php include('toolttip_edit_delete.php'); ?>												
-			<td class="empty" width="80"><a rel="tooltip"  title="Cetak SPK" id="<?php print $row[1]; ?>" href="spk.php<?php echo '?kode_kegiatan='.$row[1]; ?>" class="btn btn-success"><i class="icon-print icon-small"> Cetak</i></a>
+			<td class="empty" width="80"><a rel="tooltip"  title="Cetak SPK" id="<?php print $row[1]; ?>" href="javascript:void(0)" class="btn btn-success" onclick="area_cetak('<?php echo $row[1]; ?>')"><i class="icon-print icon-small"> Cetak</i></a>
            <script type="text/javascript">
 		     $(document).ready(function(){
 		     $('#print').tooltip('show');
 		     $('#print').tooltip('hide');
 		     });
-		   </script> 
+		   </script>
             </td>
 		</tr>
 <?php } ?>   
