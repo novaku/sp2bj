@@ -1,5 +1,6 @@
 <?php include('header.php');?>
 <?php include('session.php');?>
+<script type="text/javascript" src="assets/autoNumeric.js"></script>
     <body>
 		<?php include('navbar.php'); ?>
         <div class="container-fluid">
@@ -40,8 +41,8 @@
 <a title="Click Pilih Type Anggaran" class="btn btn-success" id="info" name="pl"> PL</a>    <a title="Click Pilih Type Anggaran" data-toggle="modal" class="btn btn-success" href="#type_anggaran" id="info" name="lpse"> LPSE</a> 
 									<script type="text/javascript">
 									 $(document).ready(function(){
-									 $('#info').tooltip('show');
-									 $('#info').tooltip('hide');
+                                         $('#info').tooltip('show');
+                                         $('#info').tooltip('hide');
 									 });
 									</script>
 
@@ -87,7 +88,7 @@
 <div class="control-group">
 <label class="control-label" for="inputPassword">Hps :</label>
 <div class="controls">
-<input type="number" class="span5" name="Hps" id="focusedInput" placeholder="Hps" required>
+<input type="text" class="span5" id="numberHps" placeholder="Hps" required>
 		                                </div>
 	                                    </div> 
 <div class="control-group">
@@ -363,9 +364,12 @@
 	                                    </div>
 		                                <script type="text/javascript">
 										$(document).ready(function(){
-										$('#save').tooltip('show');
-										$('#save').tooltip('hide');
+                                            $('#save').tooltip('show');
+                                            $('#save').tooltip('hide');
 										});
+                                        jQuery(function($) {
+                                            $('#numberHps').autoNumeric('init');
+                                        });
 										</script>
 	                                </form>
                                     

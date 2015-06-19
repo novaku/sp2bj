@@ -36,10 +36,10 @@
 		<link rel="stylesheet" type="text/css" href="vendors/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css"></link>
 		<script src="vendors/jGrowl/jquery.jgrowl.js"></script>	
 		<script src="vendors/datepicker.js"></script>
- 		<link rel=”stylesheet” href=”css/bootstrap.css”>
-		<link rel=”stylesheet” href=”css/datepicker.css”>
-		<script src=”js/bootstrap.js”></script>
-		<script src=”js/jquery.js”></script>
+ 		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/datepicker.css">
+		<script src="js/bootstrap.js"></script>
+		<script src="js/jquery.js"></script>
 		<style>
 		.datepicker{z-index:1151;}
 		</style>
