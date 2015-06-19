@@ -459,7 +459,7 @@ mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admi
         </div>
 		<?php include('script.php'); ?>
         <!–javascript here–>
-<script src=”js/bootstrap-modal.js”></script>
-<script src=”js/bootstrap-transition.js”></script>
-<script src=”js/bootstrap-datepicker.js”></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
     </body>
