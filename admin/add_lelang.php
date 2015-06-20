@@ -282,7 +282,7 @@
 <div class="control-group">
 <label class="control-label" for="inputPassword">Masa Pemel :</label>
 <div class="controls">
-<input type="text" class="span8" name="Masa_pemel" id="focusedInput" placeholder="Masa_pemel" required>
+<input type="text" class="span8" name="Masa_pemel" id="Masa_pemel" placeholder="Masa_pemel" required>
 		                                </div>
 	                                    </div> 
 <div class="control-group">
@@ -387,6 +387,7 @@
                                             $('#uang_muka').autoNumeric('init', {aSep: '.', aDec: ',', mDec: '0'});
                                             $('#Harga_nego').autoNumeric('init', {aSep: '.', aDec: ',', mDec: '0'});
                                             $('#Masa_pelaksanaan').autoNumeric('init', {aSep: '.', aDec: ',', mDec: '0'});
+                                            $('#Masa_pemel').autoNumeric('init', {aSep: '.', aDec: ',', mDec: '0'});
                                         });
 										</script>
 	                                </form>
