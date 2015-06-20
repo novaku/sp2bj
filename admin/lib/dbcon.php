@@ -26,4 +26,7 @@ function gstr(){
     return $dstr;
 }
 
-?>
+function get_numerics ($str) {
+    preg_match_all('/\d+/', $str, $matches);
+    return implode('',$matches[0]);
+}
