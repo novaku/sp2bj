@@ -78,14 +78,7 @@
 <div class="controls">
 <input type="text" size="9" name="kode_bidang" id="focusedInput" placeholder="Kode Bidang" required>
 		                                </div>
-	                                    </div> 
-<div class="control-group">
-<label class="control-label" for="inputPassword">Nama Perusahaan :</label>
-<div class="controls">
-<input class="span8" type="text" name="nama_prsh" id="focusedInput" placeholder="Nama Perusahaan" required>
-		                                </div>
-	                                    </div> 
-                                        
+	                                    </div>
 <div class="control-group">
 <label class="control-label" for="inputPassword">Nama Kegiatan :</label>
 <div class="controls">
@@ -398,7 +391,6 @@ $id_lelang = $_POST['id_lelang'];
 $id_penyedia = $_POST['id_penyedia'];
 $kode_kegiatan = $_POST['kode_kegiatan'];
 $Kode_bidang = $_POST['kode_bidang'];
-$nama_prsh = $_POST['nama_prsh'];
 $nama_kegiatan = $_POST['nama_kegiatan'];
 $tgl_undangan = $_POST['tgl_undangan'];
 $Hps = get_numerics($_POST['Hps']);
@@ -457,7 +449,7 @@ window.location = "add_lelang.php";
              	                      </script>
 		                              <?php
 }else{
-mysql_query("insert into data_lelang (id_lelang,id_penyedia,kode_kegiatan,kode_bidang,nama_prsh,nama_kegiatan,tgl_undangan,Hps,Terbilang_hps,Hari_bapp,tgl_bapp,Bln_bapp,Tgl_angka_bapp,Nilai_penawaran,Terbilang,uang_muka,Hari_bahep,Tgl_nahep,Bln_bahep,Tgl_angka_bahep,Tgl_und_kla_nego,Hari_kla_nego,Tgl_kla_nego,Hari_bakn,Tgl_bakn,Bln_bakn,Tgl_angka_bakn,Harga_nego,Terbilang_nego,Hari_bahpl,Tgl_bahpl,Bln_bahpl,Tgl_angka_bahpl,Hari_bap_pemenang,Tgl_bap_pemenang,Bln_bap_pemenang,Tgl_angka_bap_pemenang,Masa_pemel,Terbilang_pemel,Hari_kontrak,Tgl_kontrak,Bln_kontrak,Tgl_angka_kontrak,Masa_pelaksanaan,Terbilang_masa_pelaks,Waktu_pelaksanaan,Tgl_baph,Hari_splspmk,tgl_splspmk,bln_splspmk,tgl_angka_splspmk,bank_garansi) values('$id_lelang','$id_penyedia','$kode_kegiatan','$Kode_bidang','$nama_prsh','$nama_kegiatan','$tgl_undangan','$Hps','$Terbilang_hps','$Hari_bapp','$tgl_bapp','$Bln_bapp','$Tgl_angka_bapp','$Nilai_penawaran','$Terbilang','$uang_muka','$Hari_bahep','$Tgl_nahep','$Bln_bahep','$Tgl_angka_bahep','$Tgl_und_kla_nego','$Hari_kla_nego','$Tgl_kla_nego','$Hari_bakn','$Tgl_bakn','$Bln_bakn','$Tgl_angka_bakn','$Harga_nego','$Terbilang_nego','$Hari_bahpl','$Tgl_bahpl','$Bln_bahpl','$Tgl_angka_bahpl','$Hari_bap_pemenang','$Tgl_bap_pemenang','$Bln_bap_pemenang','$Tgl_angka_bap_pemenang','$Masa_pemel','$Terbilang_pemel','$Hari_kontrak','$Tgl_kontrak','$Bln_kontrak','$Tgl_angka_kontrak','$Masa_pelaksanaan','$Terbilang_masa_pelaks','$Waktu_pelaksanaan','$Tgl_baph','$Hari_splspmk','$tgl_splspmk','$bln_splspmk','$tgl_angka_splspmk','$bank_garansi')")or die(mysql_error());
+mysql_query("insert into data_lelang (id_lelang,id_penyedia,kode_kegiatan,kode_bidang,nama_kegiatan,tgl_undangan,Hps,Terbilang_hps,Hari_bapp,tgl_bapp,Bln_bapp,Tgl_angka_bapp,Nilai_penawaran,Terbilang,uang_muka,Hari_bahep,Tgl_nahep,Bln_bahep,Tgl_angka_bahep,Tgl_und_kla_nego,Hari_kla_nego,Tgl_kla_nego,Hari_bakn,Tgl_bakn,Bln_bakn,Tgl_angka_bakn,Harga_nego,Terbilang_nego,Hari_bahpl,Tgl_bahpl,Bln_bahpl,Tgl_angka_bahpl,Hari_bap_pemenang,Tgl_bap_pemenang,Bln_bap_pemenang,Tgl_angka_bap_pemenang,Masa_pemel,Terbilang_pemel,Hari_kontrak,Tgl_kontrak,Bln_kontrak,Tgl_angka_kontrak,Masa_pelaksanaan,Terbilang_masa_pelaks,Waktu_pelaksanaan,Tgl_baph,Hari_splspmk,tgl_splspmk,bln_splspmk,tgl_angka_splspmk,bank_garansi) values('$id_lelang','$id_penyedia','$kode_kegiatan','$Kode_bidang','$nama_kegiatan','$tgl_undangan','$Hps','$Terbilang_hps','$Hari_bapp','$tgl_bapp','$Bln_bapp','$Tgl_angka_bapp','$Nilai_penawaran','$Terbilang','$uang_muka','$Hari_bahep','$Tgl_nahep','$Bln_bahep','$Tgl_angka_bahep','$Tgl_und_kla_nego','$Hari_kla_nego','$Tgl_kla_nego','$Hari_bakn','$Tgl_bakn','$Bln_bakn','$Tgl_angka_bakn','$Harga_nego','$Terbilang_nego','$Hari_bahpl','$Tgl_bahpl','$Bln_bahpl','$Tgl_angka_bahpl','$Hari_bap_pemenang','$Tgl_bap_pemenang','$Bln_bap_pemenang','$Tgl_angka_bap_pemenang','$Masa_pemel','$Terbilang_pemel','$Hari_kontrak','$Tgl_kontrak','$Bln_kontrak','$Tgl_angka_kontrak','$Masa_pelaksanaan','$Terbilang_masa_pelaks','$Waktu_pelaksanaan','$Tgl_baph','$Hari_splspmk','$tgl_splspmk','$bln_splspmk','$tgl_angka_splspmk','$bank_garansi')")or die(mysql_error());
 mysql_query("insert into activity_log (date,username,action) values(NOW(),'$admin_username','Penambahan Data lelang dgn id $id_lelang')")or die(mysql_error());											
 ?>
 		                              <script>

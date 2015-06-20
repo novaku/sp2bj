@@ -187,9 +187,19 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
  </tr>
    <!--NALD, ARI DI ASTA ANG IMO NA I BUTANG SULOD SA MYSQL FETCH ARRAY-->
 		<?php
-		$hasil = mysql_query("select * from data_lelang LIMIT 0,20")or die(mysql_error());
-		$count = mysql_num_rows($hasil);		
-		while($row = mysql_fetch_row($hasil)){
+        $limitPerPage = 20;
+        $page = empty($_GET['page']) || !isset($_GET['page']) ? 1 : $_GET['page'];
+        $offset = $page == 1 ? 0 : ($page - 1) * $limitPerPage;
+
+        $hasil = mysql_query("select a.id_lelang,a.id_penyedia,kode_kegiatan,kode_bidang,b.nama_prsh,a.nama_kegiatan,a.terbilang_hps from data_lelang a
+              LEFT JOIN penyedia b ON b.id_penyedia = a.id_penyedia
+            LIMIT " . $offset . "," . $limitPerPage) or die(mysql_error());
+
+        $qryTotal = mysql_query('SELECT id_lelang FROM data_lelang') or die(mysql_error());
+        $count = mysql_num_rows($qryTotal);
+        $totalPage = ceil($count / $limitPerPage);
+        $i = $page == 1 ? 1 : $offset + 1;
+		while($row = mysql_fetch_assoc($hasil)){
 		?>
 
  <tr style='mso-yfti-irow:1'>
@@ -197,45 +207,47 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal align="center" style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"calibri","serif"'><?php echo $row[0]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"calibri","serif"'><?php echo $i; ?><o:p></o:p></span></p>
   </td>
   <td width=80 valign=top style='width:80pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal align="center" style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"calibri","serif"'><?php echo $row[1]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"calibri","serif"'><?php echo $row['kode_kegiatan']; ?><o:p></o:p></span></p>
   </td>
   <td width=80 valign=top style='width:80pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal align="center" style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"calibri","serif"'><?php echo $row[2]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"calibri","serif"'><?php echo $row['kode_bidang']; ?><o:p></o:p></span></p>
   </td>
   <td width=188 valign=top style='width:140.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal align="center" style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"calibri","serif"'><?php echo $row[3]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"calibri","serif"'><?php echo $row['nama_prsh']; ?><o:p></o:p></span></p>
   </td>
   <td width=200 valign=top style='width:200pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal align="left" style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"calibri","serif"'><?php echo $row[4]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"calibri","serif"'><?php echo $row['nama_kegiatan']; ?><o:p></o:p></span></p>
   </td>
   <td width=80 valign=top style='width:80pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal align="center" style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"calibri","serif"'><?php echo $row[6]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"calibri","serif"'><?php echo $row['terbilang_hps']; ?><o:p></o:p></span></p>
   </td>
   
- <?php } ?> 
+ <?php
+    $i++;
+ } ?>
   <!--NALD, ARI DI ASTA ANG IMO NA I BUTANG SULOD SA MYSQL FETCH ARRAY-->
  </tr>
  <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
@@ -249,8 +261,8 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 </table>
 
 <ul class="pager">
-  <li><a href="#">Previous</a></li>
-  <li><a href="#">Next</a></li>
+  <li <?php echo $page == 1 ? 'class="disabled"' : '' ?>><a href="<?php echo $page == 1 ? 'javascript:void(0)' : '?page='.($page - 1) ?>">Previous</a></li>
+  <li <?php echo $page >= $totalPage ? 'class="disabled"' : '' ?>><a href="<?php echo $page >= $totalPage ? 'javascript:void(0)' : '?page='.($page + 1) ?>">Next</a></li>
 </ul>
 
   <!--AREA MAU DI HAPUS-->
@@ -342,7 +354,7 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 <center>
 <hr>
 		<footer>
-           <p>All Right Reserved Fauzan Cipta Solusi Coding™ 2015</p>
+           <p>All Right Reserved Fauzan Cipta Solusi Codingï¿½ 2015</p>
         <footer>
 </center>
 </div>
