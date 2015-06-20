@@ -87,6 +87,18 @@
             $("#tgl14").datepicker({
                 format:"yyyy-mm-dd"
             });
+            $("#tgl15").datepicker({
+                format:"yyyy-mm-dd"
+            });
+            $("#tgl16").datepicker({
+                format:"yyyy-mm-dd"
+            });
+            $("#tgl17").datepicker({
+                format:"yyyy-mm-dd"
+            });
+            $("#tgl18").datepicker({
+                format:"yyyy-mm-dd"
+            });
 		});
 		</script>
 </head>

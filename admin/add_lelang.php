@@ -52,7 +52,21 @@
 <div class="controls">
 <input type="text" class="span2" value=<?php echo $urutlelang?> readonly name="id_lelang" id="focusedInput" required>
 		                                </div>
-	                                    </div> 
+	                                    </div>
+<div class="control-group">
+<label class="control-label" for="selectPenyedia">Penyedia :</label>
+<div class="controls">
+    <select class="form-control" name="id_penyedia">
+        <option value="" selected>--tidak ada--</option>
+        <?php
+        $result = mysql_query("SELECT id_penyedia,nama_prsh FROM penyedia ORDER BY nama_prsh");
+        while ($row = mysql_fetch_assoc($result)) {
+            echo '<option value="'.$row['id_penyedia'].'">'.$row['nama_prsh'].'</option>';
+        }
+        ?>
+    </select>
+		                                </div>
+	                                    </div>
 <div class="control-group">
 <label class="control-label" for="inputPassword">Kode Rekening Kegiatan :</label>
 <div class="controls">
@@ -88,7 +102,7 @@
 <div class="control-group">
 <label class="control-label" for="inputPassword">Hps :</label>
 <div class="controls">
-<input type="text" class="span5" id="numberHps" placeholder="Hps" required>
+<input type="text" class="span5" id="numberHps" placeholder="Hps" name="Hps" required>
 		                                </div>
 	                                    </div> 
 <div class="control-group">
@@ -125,7 +139,7 @@
 <div class="control-group">
 <label class="control-label" for="inputPassword">Nilai Penawaran :</label>
 <div class="controls">
-<input type="number" class="span5" name="Nilai_penawaran" id="focusedInput" placeholder="Nilai_penawaran" required>	
+<input type="text" class="span5" name="Nilai_penawaran" id="nilai_penawaran" placeholder="Nilai_penawaran" required>
 		                                </div>
 	                                    </div> 
 <div class="control-group">
@@ -137,7 +151,7 @@
 <div class="control-group">
 <label class="control-label" for="inputPassword">Uang Muka :</label>
 <div class="controls">
-<input type="number" class="span8" name="uang_muka" id="focusedInput" placeholder="Uang Muka" required>
+<input type="text" class="span8" name="uang_muka" id="uang_muka" placeholder="Uang Muka" required>
 		                                </div>
 	                                    </div> 
 <div class="control-group">
@@ -206,9 +220,9 @@
 <input type="text" id="tgl9" name="Tgl_angka_bakn" placeholder="Tgl_angka_bakn" required> 	
 		                                </div>
 	                                    </div> 
-<div class="control-group"><label class="control-label" for="inputPassword">Harga Nego :</label>
+<div class="control-group"><label class="control-label" for="Harga_nego">Harga Nego :</label>
 <div class="controls">
-<input type="number" class="span8" name="Harga_nego" id="focusedInput" placeholder="Harga_nego" required>
+<input type="text" class="span8" name="Harga_nego" id="Harga_nego" placeholder="Harga_nego" required>
 		                                </div>
 	                                    </div> 
 <div class="control-group">
@@ -304,7 +318,7 @@
 <div class="control-group">
 <label class="control-label" for="inputPassword">Masa Pelaksanaan :</label>
 <div class="controls">
-<input type="text" class="span8" name="Masa_pelaksanaan" id="focusedInput" placeholder="Masa_pelaksanaan" required> 	
+<input type="text" class="span8" name="Masa_pelaksanaan" id="Masa_pelaksanaan" placeholder="Masa_pelaksanaan" required>
 		                                </div>
 	                                    </div> 
 <div class="control-group">
@@ -322,7 +336,7 @@
 <div class="control-group">
 <label class="control-label" for="inputPassword">Tanggal Baph :</label>
 <div class="controls">
-<input type="text" id="tgl14" name="Tgl_baph"  placeholder="Tgl_baph" required>
+<input type="text" id="tgl16" name="Tgl_baph"  placeholder="Tgl_baph" required>
 		                                </div>
 	                                    </div> 
 <div class="control-group">
@@ -368,7 +382,11 @@
                                             $('#save').tooltip('hide');
 										});
                                         jQuery(function($) {
-                                            $('#numberHps').autoNumeric('init');
+                                            $('#numberHps').autoNumeric('init', {aSep: '.', aDec: ',', mDec: '0'});
+                                            $('#nilai_penawaran').autoNumeric('init', {aSep: '.', aDec: ',', mDec: '0'});
+                                            $('#uang_muka').autoNumeric('init', {aSep: '.', aDec: ',', mDec: '0'});
+                                            $('#Harga_nego').autoNumeric('init', {aSep: '.', aDec: ',', mDec: '0'});
+                                            $('#Masa_pelaksanaan').autoNumeric('init', {aSep: '.', aDec: ',', mDec: '0'});
                                         });
 										</script>
 	                                </form>
@@ -381,15 +399,15 @@ $Kode_bidang = $_POST['kode_bidang'];
 $nama_prsh = $_POST['nama_prsh'];
 $nama_kegiatan = $_POST['nama_kegiatan'];
 $tgl_undangan = $_POST['tgl_undangan'];
-$Hps = $_POST['Hps'];
+$Hps = get_numerics($_POST['Hps']);
 $Terbilang_hps = $_POST['Terbilang_hps'];
 $Hari_bapp = $_POST['Hari_bapp'];
 $tgl_bapp = $_POST['tgl_bapp'];
 $Bln_bapp = $_POST['Bln_bapp'];
 $Tgl_angka_bapp = $_POST['Tgl_angka_bapp'];
-$Nilai_penawaran = $_POST['Nilai_penawaran'];
+$Nilai_penawaran = get_numerics($_POST['Nilai_penawaran']);
 $Terbilang = $_POST['Terbilang'];
-$uang_muka = $_POST['uang_muka'];
+$uang_muka = get_numerics($_POST['uang_muka']);
 $Hari_bahep = $_POST['Hari_bahep'];
 $Tgl_nahep = $_POST['Tgl_nahep'];
 $Bln_bahep = $_POST['Bln_bahep'];
@@ -401,7 +419,7 @@ $Hari_bakn = $_POST['Hari_bakn'];
 $Tgl_bakn = $_POST['Tgl_bakn'];
 $Bln_bakn = $_POST['Bln_bakn'];
 $Tgl_angka_bakn = $_POST['Tgl_angka_bakn'];
-$Harga_nego = $_POST['Harga_nego'];
+$Harga_nego = get_numerics($_POST['Harga_nego']);
 $Terbilang_nego = $_POST['Terbilang_nego'];
 $Hari_bahpl = $_POST['Hari_bahpl'];
 $Tgl_bahpl = $_POST['Tgl_bahpl'];
