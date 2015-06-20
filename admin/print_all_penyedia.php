@@ -190,56 +190,63 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
   </td>
  </tr>
    <!--NALD, ARI DI ASTA ANG IMO NA I BUTANG SULOD SA MYSQL FETCH ARRAY-->
-		<?php
-		$hasil = mysql_query("select * from penyedia")or die(mysql_error());
-		$count = mysql_num_rows($hasil);		
-		while($row = mysql_fetch_row($hasil)){
-		?>
+    <?php
+    $limitPerPage = 10;
+    $page = empty($_GET['page']) || !isset($_GET['page']) ? 1 : $_GET['page'];
+    $offset = $page == 1 ? 0 : ($page - 1) * $limitPerPage;
+
+    $hasil = mysql_query("select * from penyedia LIMIT " . $offset . "," . $limitPerPage) or die(mysql_error());
+
+    $qryTotal = mysql_query('SELECT id_penyedia FROM penyedia') or die(mysql_error());
+    $count = mysql_num_rows($qryTotal);
+    $totalPage = ceil($count / $limitPerPage);
+    while($row = mysql_fetch_assoc($hasil)){
+    ?>
 
  <tr style='mso-yfti-irow:1'>
   <td width=50 valign=top style='width:140.9pt;border:solid windowtext 1.0pt;
   border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row[0]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['id_penyedia']; ?><o:p></o:p></span></p>
   </td>
   <td width=188 valign=top style='width:140.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row[1]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['nama_prsh']; ?><o:p></o:p></span></p>
   </td>
   <td width=150 valign=top style='width:140.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row[2]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['nama_direktur']; ?><o:p></o:p></span></p>
   </td>
   <td width=188 valign=top style='width:140.9pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row[3]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['alamat']; ?><o:p></o:p></span></p>
   </td>
   <td width=70 valign=top style='width:140.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row[6]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['no_telp']; ?><o:p></o:p></span></p>
   </td>
   <td width=80 valign=top style='width:140.95pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
   mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
   mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
-  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row[8]; ?><o:p></o:p></span></p>
+  normal'><span style='font-family:"Times New Roman","serif"'><?php echo $row['email']; ?><o:p></o:p></span></p>
   </td>
   
- <?php } ?> 
+ <?php } ?>
   <!--NALD, ARI DI ASTA ANG IMO NA I BUTANG SULOD SA MYSQL FETCH ARRAY-->
  </tr>
  <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
@@ -251,6 +258,11 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
   </td>
  </tr>
 </table>
+
+    <ul class="pager">
+        <li <?php echo $page == 1 ? 'class="disabled"' : '' ?>><a href="<?php echo $page == 1 ? 'javascript:void(0)' : '?page='.($page - 1) ?>">Previous</a></li>
+        <li <?php echo $page >= $totalPage ? 'class="disabled"' : '' ?>><a href="<?php echo $page >= $totalPage ? 'javascript:void(0)' : '?page='.($page + 1) ?>">Next</a></li>
+    </ul>
 
   <!--AREA MAU DI HAPUS-->
 
@@ -341,7 +353,7 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
 <center>
 <hr>
 		<footer>
-           <p>All Right Reserved Fauzan Cipta Solusi Coding™ 2015</p>
+           <p>All Right Reserved Fauzan Cipta Solusi Codingï¿½ 2015</p>
         <footer>
 </center>
 </div>
