@@ -191,7 +191,7 @@ normal'><span style='font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:
         $page = empty($_GET['page']) || !isset($_GET['page']) ? 1 : $_GET['page'];
         $offset = $page == 1 ? 0 : ($page - 1) * $limitPerPage;
 
-        $hasil = mysql_query("select a.id_lelang,a.id_penyedia,kode_kegiatan,kode_bidang,b.nama_prsh,a.nama_kegiatan,a.terbilang_hps from data_lelang a
+        $hasil = mysql_query("select a.id_lelang,a.id_penyedia,a.kode_kegiatan,a.kode_bidang,b.nama_prsh,a.nama_kegiatan,a.terbilang_hps from data_lelang a
               LEFT JOIN penyedia b ON b.id_penyedia = a.id_penyedia
             LIMIT " . $offset . "," . $limitPerPage) or die(mysql_error());
 
