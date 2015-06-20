@@ -14,34 +14,35 @@
 				});
 				</script>		
 			</form>
-						<script>
-						jQuery(document).ready(function(){
-						jQuery("#login_form1").submit(function(e){
-								e.preventDefault();
-								var formData = jQuery(this).serialize();
-								$.ajax({
-									type: "POST",
-									url: "login.php",
-									data: formData,
-									success: function(html){
-									if(html=='true_admin')
-									{
-									$.jGrowl("Loading File Please Wait......", { sticky: true });
-									$.jGrowl("Selamat Datang di Sistem Pendataan Pengadaan Barang &amp; Jasa (SP2BJ)", { header: 'Access Granted' });
-									var delay = 1000;
-										setTimeout(function(){ window.location = 'admin/dashboard.php'  }, delay);  
-									}else if (html == 'true'){
-										$.jGrowl("Selamat Datang di Sistem Pendataan Pengadaan Barang &amp; Jasa (SP2BJ)", { header: 'Access Granted' });
-									var delay = 1000;
-										setTimeout(function(){ window.location = 'technical Staff/dashboard_client.php'  }, delay);  
-									}else
-									{
-									$.jGrowl("Tolong Cek username dan Password Anda", { header: 'Login Failed' });
-									}
-									}
-								});
-								return false;
-							});
-						});
-						</script>
+            <script>
+                jQuery(document).ready(function () {
+                    jQuery("#login_form1").submit(function (e) {
+                        e.preventDefault();
+                        var formData = jQuery(this).serialize();
+                        var delay = 1000;
+                        $.ajax({
+                            type: "POST",
+                            url: "login.php",
+                            data: formData,
+                            success: function (html) {
+                                if (html == 'true_admin') {
+                                    $.jGrowl("Loading File Please Wait......", {sticky: true});
+                                    $.jGrowl("Selamat Datang di Sistem Pendataan Pengadaan Barang &amp; Jasa (SP2BJ)", {header: 'Access Granted'});
+                                    setTimeout(function () {
+                                        window.location = 'admin/dashboard.php'
+                                    }, delay);
+                                } else if (html == 'true') {
+                                    $.jGrowl("Selamat Datang di Sistem Pendataan Pengadaan Barang &amp; Jasa (SP2BJ)", {header: 'Access Granted'});
+                                    setTimeout(function () {
+                                        window.location = 'admin/dashboard.php'
+                                    }, delay);
+                                } else {
+                                    $.jGrowl("Tolong Cek username dan Password Anda", {header: 'Login Failed'});
+                                }
+                            }
+                        });
+                        return false;
+                    });
+                });
+            </script>
 			
