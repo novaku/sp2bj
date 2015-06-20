@@ -47,12 +47,18 @@
                                 </div>
 							 </div>	
                             </div>
-                            <a href="client_user.php">							  
+                            <a href="client_user.php">
+                                <?php
+                                if($_SESSION['admin']) :
+                                ?>
                                 <div class="modal-footer">
                                     <span class="pull-left">Silahkan Click Lebih Detail..</span>
                                     <span class="pull-right"><i class="icon-chevron-right"></i></span>
                                     <div class="clearfix"></div>
-                                </div>							  
+                                </div>
+                                <?php
+                                endif;
+                                ?>
                             </a>
                         </div>
                     </div>         			  
@@ -78,6 +84,9 @@
                                 </div>
 							 </div>	
                             </div>
+                            <?php
+                            if($_SESSION['admin']) :
+                            ?>
                             <a href="admin_user.php">							  
                                 <div class="modal-footer">
                                     <span class="pull-left">Silahkan Click Lebih Detail..</span>
@@ -85,6 +94,9 @@
                                     <div class="clearfix"></div>
                                 </div>							  
                             </a>
+                            <?php
+                            endif;
+                            ?>
                         </div>
                     </div>   				
               </div>	       

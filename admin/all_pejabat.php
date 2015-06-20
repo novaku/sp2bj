@@ -31,7 +31,13 @@
                         <div class="muted pull-right"><i class="icon-search"></i> Nomor Induk Pegawai</div>
                      
   						<table cellpadding="0" cellspacing="0" border="0" class="table" id="example">
-						<a data-placement="right" title="Click untuk Hapus Kode Rek"  data-toggle="modal" href="#pejabat_hapus" id="delete"  class="btn btn-danger" name=""><i class="icon-trash icon-large"> Hapus</i></a>
+                            <?php
+                            if($_SESSION['admin']) :
+                            ?>
+                            <a data-placement="right" title="Click untuk Hapus Kode Rek"  data-toggle="modal" href="#pejabat_hapus" id="delete"  class="btn btn-danger" name=""><i class="icon-trash icon-large"> Hapus</i></a>
+                            <?php
+                            endif;
+                            ?>
 
 									<script type="text/javascript">
 									 $(document).ready(function(){

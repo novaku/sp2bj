@@ -71,7 +71,13 @@
                         <div class="muted pull-right"><i class="icon-search"></i> Id Penyedia</div>
                      
   						<table cellpadding="0" cellspacing="0" border="0" class="table" id="example">
-						<a data-placement="right" title="Click untuk Hapus Data Penyedia"  data-toggle="modal" href="#penyedia_hapus" id="delete"  class="btn btn-danger" name=""><i class="icon-trash icon-large"> Hapus</i></a>
+                            <?php
+                            if($_SESSION['admin']) :
+                            ?>
+                            <a data-placement="right" title="Click untuk Hapus Data Penyedia"  data-toggle="modal" href="#penyedia_hapus" id="delete"  class="btn btn-danger" name=""><i class="icon-trash icon-large"> Hapus</i></a>
+                            <?php
+                            endif;
+                            ?>
 
 									<script type="text/javascript">
 									 $(document).ready(function(){

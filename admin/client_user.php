@@ -1,5 +1,12 @@
 <?php include('header.php'); ?>
 <?php include('session.php'); ?>
+<?php
+if($_SESSION['admin'] == false) {
+    echo '<script type="text/javascript">
+       window.location = "'.host().'admin/dashboard.php"
+  </script>';
+}
+?>
     <body>
 		<?php include('navbar.php'); ?>
         <div class="container-fluid">
