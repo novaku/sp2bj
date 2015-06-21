@@ -7,12 +7,18 @@
 			 <?php include('dashboard_slidebar.php'); ?>		
                 <div class="span9" id="content">
                     <div class="row-fluid">
-         	         <?php $query= mysql_query("select * from admin where admin_id = '$session_id'")or die(mysql_error());
-			         $row = mysql_fetch_array($query);			
-			         ?>
                     <div class="col-lg-12">
                       <div class="alert alert-success alert-dismissable">
                          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                          <?php
+                          if($_SESSION['admin']) {
+                              $qStr = 'SELECT adminthumbnails FROM admin WHERE admin_id='.$session_id;
+                          } else {
+                              $qStr = 'SELECT thumbnails AS adminthumbnails FROM client WHERE client_id='.$session_id;
+                          }
+                          $query= mysql_query($qStr)or die(mysql_error());
+                          $row = mysql_fetch_assoc($query);
+                          ?>
                           <img id="avatar1" class="img-responsive" src="<?php echo $row['adminthumbnails']; ?>"><strong> Selamat Datang! <?php echo $user_row['firstname']." ".$user_row['lastname'];  ?></strong>
                       </div>
                     </div>

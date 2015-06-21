@@ -1,3 +1,12 @@
+<?php
+if($_SESSION['admin']) {
+    $qStr = 'SELECT adminthumbnails FROM admin WHERE admin_id='.$session_id;
+} else {
+    $qStr = 'SELECT thumbnails AS adminthumbnails FROM client WHERE client_id='.$session_id;
+}
+$query= mysql_query($qStr)or die(mysql_error());
+$row = mysql_fetch_assoc($query);
+?>
      <div class="span3" id="sidebar">
 	              <img id="admin_avatar" class="img-polaroid" src="<?php echo $row['adminthumbnails']; ?>">
 	                 <?php include('count.php'); ?>

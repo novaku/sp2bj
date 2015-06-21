@@ -14,9 +14,15 @@
 				  <!--.nav-collapse -->
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
-						<?php $query= mysql_query("select * from admin where admin_id = '$session_id'")or die(mysql_error());
-							  $row = mysql_fetch_array($query);
-						?>
+                            <?php
+                            if($_SESSION['admin']) {
+                                $qStr = 'SELECT * FROM admin WHERE admin_id='.$session_id;
+                            } else {
+                                $qStr = 'SELECT thumbnails AS adminthumbnails,"Client" as firstname, "" as lastname FROM client WHERE client_id='.$session_id;
+                            }
+                            $query= mysql_query($qStr)or die(mysql_error());
+                            $row = mysql_fetch_assoc($query);
+                            ?>
                             <li class="dropdown">
                                 <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><img id="avatar1" class="img-responsive" src="<?php echo $row['adminthumbnails']; ?>">&nbsp;<?php echo $row['firstname']." ".$row['lastname'];  ?> <i class="caret"></i>
                                 </a>
